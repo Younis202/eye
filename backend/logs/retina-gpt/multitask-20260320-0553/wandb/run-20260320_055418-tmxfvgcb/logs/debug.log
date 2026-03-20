@@ -1,0 +1,45 @@
+2026-03-20 05:54:18,395 INFO    MainThread:19332 [wandb_setup.py:_flush():81] Current SDK version is 0.25.1
+2026-03-20 05:54:18,395 INFO    MainThread:19332 [wandb_setup.py:_flush():81] Configure stats pid to 19332
+2026-03-20 05:54:18,395 INFO    MainThread:19332 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2026-03-20 05:54:18,395 INFO    MainThread:19332 [wandb_init.py:setup_run_log_directory():717] Logging user logs to logs\retina-gpt\multitask-20260320-0553\wandb\run-20260320_055418-tmxfvgcb\logs\debug.log
+2026-03-20 05:54:18,395 INFO    MainThread:19332 [wandb_init.py:setup_run_log_directory():718] Logging internal logs to logs\retina-gpt\multitask-20260320-0553\wandb\run-20260320_055418-tmxfvgcb\logs\debug-internal.log
+2026-03-20 05:54:18,399 INFO    MainThread:19332 [wandb_init.py:init():844] calling init triggers
+2026-03-20 05:54:18,399 INFO    MainThread:19332 [wandb_init.py:init():849] wandb.init called with sweep_config: {}
+config: {'lr': 0.0001, 'epochs': 50, 'datasets': {'dr': 'aptos'}, '_wandb': {}}
+2026-03-20 05:54:18,399 INFO    MainThread:19332 [wandb_init.py:init():892] starting backend
+2026-03-20 05:54:21,291 INFO    MainThread:19332 [wandb_init.py:init():895] sending inform_init request
+2026-03-20 05:54:21,331 INFO    MainThread:19332 [wandb_init.py:init():903] backend started and connected
+2026-03-20 05:54:21,332 INFO    MainThread:19332 [wandb_init.py:init():973] updated telemetry
+2026-03-20 05:54:21,334 INFO    MainThread:19332 [wandb_init.py:init():997] communicating run to backend with 90.0 second timeout
+2026-03-20 05:54:22,724 WARNING MainThread:19332 [wandb_init.py:init():1587] [no run ID] interrupted
+Traceback (most recent call last):
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\wandb_init.py", line 1578, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\wandb_init.py", line 1008, in init
+    result = wait_with_progress(
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\mailbox\wait_with_progress.py", line 78, in wait_all_with_progress
+    return asyncer.run(progress_loop_with_timeout)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 137, in run
+    return future.result()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 440, in result
+    self._condition.wait(timeout)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+2026-03-20 05:54:22,734 ERROR   Thread-2 (wrapped_target):19332 [internal_api.py:execute():398] [no run ID] Error executing GraphQL.
+Traceback (most recent call last):
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\internal\internal_api.py", line 394, in execute
+    return self.client.execute(*args, **kwargs)  # type: ignore
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\vendor\gql-0.2.0\wandb_gql\client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\wandb\sdk\lib\gql_request.py", line 71, in execute
+    request.raise_for_status()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: https://api.wandb.ai/graphql
+2026-03-20 05:54:22,741 INFO    wandb-AsyncioManager-main:19332 [service_client.py:_forward_responses():134] Reached EOF.
+2026-03-20 05:54:22,741 INFO    wandb-AsyncioManager-main:19332 [mailbox.py:close():155] Closing mailbox, abandoning 0 handles.

@@ -1,0 +1,337 @@
+2026-03-20 07:32:41 | INFO     | training.experiment_tracker — [W&B] Run started: https://wandb.ai/younismohamed87643-eye-main/retina-gpt/runs/ujpk8wor
+2026-03-20 07:32:42 | INFO     | training.experiment_tracker — [TensorBoard] Logging to logs\retina-gpt\multitask-20260320-0732
+2026-03-20 07:32:42 | INFO     | training.experiment_tracker — [ExperimentTracker] Started run 'multitask-20260320-0732' | project='retina-gpt'
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:213: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = GradScaler()
+2026-03-20 07:32:42 | INFO     | training.distributed — [MixedPrecision] precision=fp16, dtype=torch.float16
+[RetinaGPT] Foundation encoder frozen.
+[RetinaGPT] Unfroze last 4 encoder layers.
+2026-03-20 07:32:42 | INFO     | training.distributed — [Rank 0] 🏥 Stage 3: Multi-Task Fine-Tuning
+2026-03-20 07:32:42 | INFO     | training.distributed — [Rank 0]    Tasks: ['dr']
+2026-03-20 07:32:42 | INFO     | training.distributed — [Rank 0]    Primary: dr/kappa
+2026-03-20 07:32:42 | INFO     | training.distributed — [Rank 0]    Backbone layers unfrozen: 4
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:33:46 | INFO     | training.distributed — [Rank 0] Epoch [  1/50]  Train kappa: 0.0409  Val kappa: 0.2268
+2026-03-20 07:33:46 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0001.pt
+2026-03-20 07:33:46 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:33:46 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.2268
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:34:53 | INFO     | training.distributed — [Rank 0] Epoch [  2/50]  Train kappa: 0.1814  Val kappa: 0.1869
+2026-03-20 07:34:54 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0002.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:35:59 | INFO     | training.distributed — [Rank 0] Epoch [  3/50]  Train kappa: 0.2355  Val kappa: 0.3541
+2026-03-20 07:35:59 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0003.pt
+2026-03-20 07:36:00 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:36:00 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.3541
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:37:05 | INFO     | training.distributed — [Rank 0] Epoch [  4/50]  Train kappa: 0.3040  Val kappa: 0.4169
+2026-03-20 07:37:05 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0004.pt
+2026-03-20 07:37:06 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:37:06 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.4169
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:38:36 | INFO     | training.distributed — [Rank 0] Epoch [  5/50]  Train kappa: 0.3747  Val kappa: 0.4417
+2026-03-20 07:38:37 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0005.pt
+2026-03-20 07:38:38 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:38:38 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.4417
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:40:35 | INFO     | training.distributed — [Rank 0] Epoch [  6/50]  Train kappa: 0.4395  Val kappa: 0.4921
+2026-03-20 07:40:36 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0006.pt
+2026-03-20 07:40:37 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:40:37 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.4921
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:42:23 | INFO     | training.distributed — [Rank 0] Epoch [  7/50]  Train kappa: 0.4682  Val kappa: 0.4715
+2026-03-20 07:42:24 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0007.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:44:28 | INFO     | training.distributed — [Rank 0] Epoch [  8/50]  Train kappa: 0.5446  Val kappa: 0.5589
+2026-03-20 07:44:29 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0008.pt
+2026-03-20 07:44:30 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:44:30 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.5589
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:46:29 | INFO     | training.distributed — [Rank 0] Epoch [  9/50]  Train kappa: 0.5478  Val kappa: 0.5864
+2026-03-20 07:46:30 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0009.pt
+2026-03-20 07:46:31 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:46:31 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.5864
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:47:34 | INFO     | training.distributed — [Rank 0] Epoch [ 10/50]  Train kappa: 0.5487  Val kappa: 0.5735
+2026-03-20 07:47:35 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0010.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:48:40 | INFO     | training.distributed — [Rank 0] Epoch [ 11/50]  Train kappa: 0.6211  Val kappa: 0.5754
+2026-03-20 07:48:41 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0011.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:49:45 | INFO     | training.distributed — [Rank 0] Epoch [ 12/50]  Train kappa: 0.6644  Val kappa: 0.5872
+2026-03-20 07:49:45 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0012.pt
+2026-03-20 07:49:46 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:49:46 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.5872
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:50:50 | INFO     | training.distributed — [Rank 0] Epoch [ 13/50]  Train kappa: 0.7052  Val kappa: 0.5534
+2026-03-20 07:50:50 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0013.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:51:55 | INFO     | training.distributed — [Rank 0] Epoch [ 14/50]  Train kappa: 0.7119  Val kappa: 0.5847
+2026-03-20 07:51:55 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0014.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:53:00 | INFO     | training.distributed — [Rank 0] Epoch [ 15/50]  Train kappa: 0.7169  Val kappa: 0.5185
+2026-03-20 07:53:00 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0015.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:54:04 | INFO     | training.distributed — [Rank 0] Epoch [ 16/50]  Train kappa: 0.7807  Val kappa: 0.5854
+2026-03-20 07:54:05 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0016.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:55:10 | INFO     | training.distributed — [Rank 0] Epoch [ 17/50]  Train kappa: 0.8018  Val kappa: 0.6148
+2026-03-20 07:55:10 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0017.pt
+2026-03-20 07:55:11 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:55:11 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.6148
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:56:16 | INFO     | training.distributed — [Rank 0] Epoch [ 18/50]  Train kappa: 0.8099  Val kappa: 0.5655
+2026-03-20 07:56:17 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0018.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:57:21 | INFO     | training.distributed — [Rank 0] Epoch [ 19/50]  Train kappa: 0.8527  Val kappa: 0.5875
+2026-03-20 07:57:22 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0019.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:58:28 | INFO     | training.distributed — [Rank 0] Epoch [ 20/50]  Train kappa: 0.8284  Val kappa: 0.5561
+2026-03-20 07:58:28 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0020.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 07:59:33 | INFO     | training.distributed — [Rank 0] Epoch [ 21/50]  Train kappa: 0.8660  Val kappa: 0.6203
+2026-03-20 07:59:34 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0021.pt
+2026-03-20 07:59:34 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 07:59:34 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.6203
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:00:40 | INFO     | training.distributed — [Rank 0] Epoch [ 22/50]  Train kappa: 0.8803  Val kappa: 0.6012
+2026-03-20 08:00:40 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0022.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:01:46 | INFO     | training.distributed — [Rank 0] Epoch [ 23/50]  Train kappa: 0.8713  Val kappa: 0.5952
+2026-03-20 08:01:46 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0023.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:02:51 | INFO     | training.distributed — [Rank 0] Epoch [ 24/50]  Train kappa: 0.8932  Val kappa: 0.6490
+2026-03-20 08:02:52 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0024.pt
+2026-03-20 08:02:52 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 08:02:52 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.6490
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:03:58 | INFO     | training.distributed — [Rank 0] Epoch [ 25/50]  Train kappa: 0.9195  Val kappa: 0.6030
+2026-03-20 08:03:59 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0025.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:05:13 | INFO     | training.distributed — [Rank 0] Epoch [ 26/50]  Train kappa: 0.9259  Val kappa: 0.6094
+2026-03-20 08:05:13 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0026.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:06:17 | INFO     | training.distributed — [Rank 0] Epoch [ 27/50]  Train kappa: 0.9279  Val kappa: 0.6284
+2026-03-20 08:06:18 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0027.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:07:23 | INFO     | training.distributed — [Rank 0] Epoch [ 28/50]  Train kappa: 0.9418  Val kappa: 0.6071
+2026-03-20 08:07:23 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0028.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:08:28 | INFO     | training.distributed — [Rank 0] Epoch [ 29/50]  Train kappa: 0.9504  Val kappa: 0.6202
+2026-03-20 08:08:28 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0029.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:09:32 | INFO     | training.distributed — [Rank 0] Epoch [ 30/50]  Train kappa: 0.9471  Val kappa: 0.6298
+2026-03-20 08:09:33 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0030.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:10:41 | INFO     | training.distributed — [Rank 0] Epoch [ 31/50]  Train kappa: 0.9551  Val kappa: 0.6678
+2026-03-20 08:10:41 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0031.pt
+2026-03-20 08:10:42 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_best.pt
+2026-03-20 08:10:42 | INFO     | training.distributed — [Rank 0]   ✅ New best! kappa=0.6678
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:11:55 | INFO     | training.distributed — [Rank 0] Epoch [ 32/50]  Train kappa: 0.9611  Val kappa: 0.6407
+2026-03-20 08:11:56 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0032.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:13:14 | INFO     | training.distributed — [Rank 0] Epoch [ 33/50]  Train kappa: 0.9553  Val kappa: 0.6212
+2026-03-20 08:13:14 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0033.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:14:20 | INFO     | training.distributed — [Rank 0] Epoch [ 34/50]  Train kappa: 0.9701  Val kappa: 0.6249
+2026-03-20 08:14:20 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0034.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:15:26 | INFO     | training.distributed — [Rank 0] Epoch [ 35/50]  Train kappa: 0.9615  Val kappa: 0.6235
+2026-03-20 08:15:27 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0035.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:16:36 | INFO     | training.distributed — [Rank 0] Epoch [ 36/50]  Train kappa: 0.9729  Val kappa: 0.6125
+2026-03-20 08:16:36 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0036.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:17:43 | INFO     | training.distributed — [Rank 0] Epoch [ 37/50]  Train kappa: 0.9721  Val kappa: 0.6213
+2026-03-20 08:17:44 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0037.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:18:51 | INFO     | training.distributed — [Rank 0] Epoch [ 38/50]  Train kappa: 0.9706  Val kappa: 0.6481
+2026-03-20 08:18:51 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0038.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:19:58 | INFO     | training.distributed — [Rank 0] Epoch [ 39/50]  Train kappa: 0.9775  Val kappa: 0.6342
+2026-03-20 08:19:58 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0039.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:21:03 | INFO     | training.distributed — [Rank 0] Epoch [ 40/50]  Train kappa: 0.9784  Val kappa: 0.6401
+2026-03-20 08:21:03 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0040.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:22:09 | INFO     | training.distributed — [Rank 0] Epoch [ 41/50]  Train kappa: 0.9848  Val kappa: 0.6244
+2026-03-20 08:22:09 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0041.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:23:16 | INFO     | training.distributed — [Rank 0] Epoch [ 42/50]  Train kappa: 0.9819  Val kappa: 0.6321
+2026-03-20 08:23:17 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0042.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:24:23 | INFO     | training.distributed — [Rank 0] Epoch [ 43/50]  Train kappa: 0.9812  Val kappa: 0.6334
+2026-03-20 08:24:23 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0043.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:25:30 | INFO     | training.distributed — [Rank 0] Epoch [ 44/50]  Train kappa: 0.9873  Val kappa: 0.6381
+2026-03-20 08:25:31 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0044.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:26:37 | INFO     | training.distributed — [Rank 0] Epoch [ 45/50]  Train kappa: 0.9808  Val kappa: 0.6425
+2026-03-20 08:26:37 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0045.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:27:42 | INFO     | training.distributed — [Rank 0] Epoch [ 46/50]  Train kappa: 0.9790  Val kappa: 0.6335
+2026-03-20 08:27:43 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0046.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:28:50 | INFO     | training.distributed — [Rank 0] Epoch [ 47/50]  Train kappa: 0.9828  Val kappa: 0.6289
+2026-03-20 08:28:51 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0047.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:29:56 | INFO     | training.distributed — [Rank 0] Epoch [ 48/50]  Train kappa: 0.9886  Val kappa: 0.6298
+2026-03-20 08:29:57 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0048.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:31:02 | INFO     | training.distributed — [Rank 0] Epoch [ 49/50]  Train kappa: 0.9855  Val kappa: 0.6342
+2026-03-20 08:31:03 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0049.pt
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:227: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast(dtype=self.dtype):
+2026-03-20 08:32:09 | INFO     | training.distributed — [Rank 0] Epoch [ 50/50]  Train kappa: 0.9810  Val kappa: 0.6349
+2026-03-20 08:32:09 | INFO     | training.distributed — [Rank 0] Checkpoint saved → checkpoints\multitask\multitask_epoch_0050.pt
+2026-03-20 08:32:10 | INFO     | training.model_registry — [Registry] Registered retina-gpt:v3.0.0 (multitask) → checkpoints\multitask\multitask_best.pt

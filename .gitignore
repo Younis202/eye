@@ -1,0 +1,5 @@
+node_modules/
+frontend/.next/
+backend/data/aptos/train_images/
+backend/checkpoints/multitask/
+backend/venv/

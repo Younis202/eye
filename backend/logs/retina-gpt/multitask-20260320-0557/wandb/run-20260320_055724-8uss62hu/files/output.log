@@ -1,0 +1,74 @@
+2026-03-20 05:57:29 | INFO     | training.experiment_tracker — [W&B] Run started: https://wandb.ai/younismohamed87643-eye-main/retina-gpt/runs/8uss62hu
+2026-03-20 05:57:29 | INFO     | training.experiment_tracker — [TensorBoard] Logging to logs\retina-gpt\multitask-20260320-0557
+2026-03-20 05:57:29 | INFO     | training.experiment_tracker — [ExperimentTracker] Started run 'multitask-20260320-0557' | project='retina-gpt'
+C:\Users\Ahmed\Desktop\eye\eye-main\backend\training\distributed.py:213: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.scaler = GradScaler()
+C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\cuda\amp\grad_scaler.py:31: UserWarning: torch.cuda.amp.GradScaler is enabled, but CUDA is not available.  Disabling.
+  super().__init__(
+2026-03-20 05:57:29 | INFO     | training.distributed — [MixedPrecision] precision=fp16, dtype=torch.float16
+[RetinaGPT] Foundation encoder frozen.
+[RetinaGPT] Unfroze last 4 encoder layers.
+2026-03-20 05:57:29 | INFO     | training.distributed — [Rank 0] 🏥 Stage 3: Multi-Task Fine-Tuning
+2026-03-20 05:57:29 | INFO     | training.distributed — [Rank 0]    Tasks: ['dr']
+2026-03-20 05:57:29 | INFO     | training.distributed — [Rank 0]    Primary: dr/kappa
+2026-03-20 05:57:29 | INFO     | training.distributed — [Rank 0]    Backbone layers unfrozen: 4
+C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py:1118: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  super().__init__(loader)
+C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py:433: UserWarning: Got pickle error when attempting to start a worker Process. This might be because the worker Process arguments are not picklable. Python 3.14+ changed the multiprocessing start method in non-Mac POSIX platforms to 'forkserver', which requires the worker Process arguments to be picklable. You can also try multiprocessing.set_start_method('fork').
+  return _MultiProcessingDataLoaderIter(self)
+Traceback (most recent call last):
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train.py", line 125, in <module>
+    main()
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train.py", line 111, in main
+    ckpt = orchestrator.run_stage3_multitask(
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 654, in run_stage3_multitask
+    best_path = trainer.train(
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 417, in train
+    train_m = self.train_epoch(self.model, loader, optimizer,
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 306, in train_epoch
+    for batch_idx, batch in enumerate(dataloader):
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 500, in __iter__
+    return self._get_iterator()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 433, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1192, in __init__
+    w.start()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 327, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\popen_spawn_win32.py", line 93, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'DatasetManager._load_preprocessor.<locals>.preprocess'
+Traceback (most recent call last):
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train.py", line 125, in <module>
+    main()
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train.py", line 111, in main
+    ckpt = orchestrator.run_stage3_multitask(
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 654, in run_stage3_multitask
+    best_path = trainer.train(
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 417, in train
+    train_m = self.train_epoch(self.model, loader, optimizer,
+  File "C:\Users\Ahmed\Desktop\eye\eye-main\backend\scripts\train_foundation.py", line 306, in train_epoch
+    for batch_idx, batch in enumerate(dataloader):
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 500, in __iter__
+    return self._get_iterator()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 433, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\site-packages\torch\utils\data\dataloader.py", line 1192, in __init__
+    w.start()
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\context.py", line 327, in _Popen
+    return Popen(process_obj)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\popen_spawn_win32.py", line 93, in __init__
+    reduction.dump(process_obj, to_child)
+  File "C:\Users\Ahmed\AppData\Local\Programs\Python\Python310\lib\multiprocessing\reduction.py", line 60, in dump
+    ForkingPickler(file, protocol).dump(obj)
+AttributeError: Can't pickle local object 'DatasetManager._load_preprocessor.<locals>.preprocess'
